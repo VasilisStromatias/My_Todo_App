@@ -19,11 +19,31 @@ function Todo() {
         },
       ];
     });
+
+    setItem("");
+  }
+
+  function toggleCheckbox(id, isCompleted) {
+    setTodos((currentTodos) => {
+      return currentTodos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todo, completed: isCompleted };
+        }
+        return todo;
+      });
+    });
+  }
+
+  function deleteItem(id) {
+    setTodos((currentTodos) => {
+      return currentTodos.filter((todo) => todo.id !== id);
+    });
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <todoForm />
+      {/* <form onSubmit={handleSubmit}>
         <label htmlFor="item">New Item</label>
         <input
           id="item"
@@ -32,16 +52,30 @@ function Todo() {
           onChange={(e) => setItem(e.target.value)}
         />
         <button className="add-to-list-button">Add item</button>
-      </form>
+      </form> */}
 
       <div>
         <h2>Item List</h2>
         <ul className="list">
-          <li>
-            <input id="checkbox" type="checkbox" />
-            <label htmlFor="checkbox"> Item 1</label>
-            <button className="delete-from-list-button"> Delete </button>
-          </li>
+          {todos.map((todo) => {
+            return (
+              <li key={todo.id}>
+                <input
+                  id="checkbox"
+                  type="checkbox"
+                  checked={todo.completed}
+                  onChange={(e) => toggleCheckbox(todo.id, e.target.checked)}
+                />
+                <label htmlFor="checkbox"> {todo.title}</label>
+                <button
+                  className="delete-from-list-button"
+                  onClick={() => deleteItem(todo.id)}
+                >
+                  Delete
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </>
