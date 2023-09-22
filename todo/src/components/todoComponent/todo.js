@@ -32,8 +32,14 @@ function Todo() {
 
   return (
     <>
-      <TodoForm onSubmit={addTodo} />
-      <TodoList todos={todos} setTodos={setTodos} />
+      <div className="todo-page">
+        <div className="todo-page-wrapper">
+          <div className="todo-page-inner">
+            <TodoForm onSubmit={addTodo} />
+            <TodoList todos={todos} setTodos={setTodos} />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

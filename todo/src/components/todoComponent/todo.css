@@ -1,1 +1,191 @@
-/* No CSS *//*# sourceMappingURL=todo.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+* {
+  font-family: "Manrope", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(16px, 1vw, 18px);
+  color: #363636;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.todo-page-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 97%;
+}
+
+.todo-page-inner {
+  border: 2px solid #b8b8b8;
+  border-radius: 40px;
+  margin-block: 100px;
+  padding: 50px;
+}
+
+.form-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.form-wrapper form label {
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-wrapper form input {
+  border: 0;
+  border: 2px solid #f2f2f2;
+  border-radius: 25px;
+  -webkit-box-shadow: inset 0 0 4px 0px;
+          box-shadow: inset 0 0 4px 0px;
+  min-height: 40px;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+.form-wrapper form input::-webkit-input-placeholder {
+  font-size: clamp(16px, 1vw, 14px);
+  color: #b8b8b8;
+}
+
+.form-wrapper form input:-ms-input-placeholder {
+  font-size: clamp(16px, 1vw, 14px);
+  color: #b8b8b8;
+}
+
+.form-wrapper form input::-ms-input-placeholder {
+  font-size: clamp(16px, 1vw, 14px);
+  color: #b8b8b8;
+}
+
+.form-wrapper form input::placeholder {
+  font-size: clamp(16px, 1vw, 14px);
+  color: #b8b8b8;
+}
+
+.form-wrapper form button {
+  display: block;
+  max-width: 100%;
+  min-width: 200px;
+  margin: 0 auto;
+  border: 0;
+  background-color: #2b2b86;
+  color: #f2f2f2;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.form-wrapper form button:hover {
+  background-color: #4141c0;
+}
+
+.item-list-wrapper {
+  padding-block: 100px;
+  margin-top: 30px;
+  border-top: 2px solid rgba(184, 184, 184, 0.2);
+}
+
+.item-list-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #b8b8b8;
+  border-radius: 30px;
+  padding: 40px 20px;
+}
+
+.item-list-inner h2 {
+  text-align: center;
+  font-size: clamp(30px, 2vw, 32px);
+  margin-bottom: 25px;
+}
+
+.item-list-inner .list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.item-list-inner .list li {
+  position: relative;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.item-list-inner .list li:last-child {
+  margin-bottom: 0;
+}
+
+.item-list-inner .list li input {
+  display: none;
+}
+
+.item-list-inner .list li input:checked + label::before {
+  background-color: #2b2b86;
+  -webkit-box-shadow: inset 0 0 0 3px #f2f2f2;
+          box-shadow: inset 0 0 0 3px #f2f2f2;
+}
+
+.item-list-inner .list li label {
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.item-list-inner .list li label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #b8b8b8;
+  border-radius: 4px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.item-list-inner button {
+  display: inline-block;
+  margin-left: 30px;
+  border: 0;
+  background-color: transparent;
+  text-decoration: underline;
+  color: #d41c1c;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.item-list-inner button:hover {
+  font-weight: 600;
+}
+
+.empty-list-text p {
+  font-weight: 500;
+  text-align: center;
+  font-size: 20px;
+}
+/*# sourceMappingURL=todo.css.map */

@@ -14,16 +14,19 @@ function TodoForm({ onSubmit }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="item">New Item</label>
-      <input
-        id="item"
-        type="text"
-        value={item}
-        onChange={(e) => setItem(e.target.value)}
-      />
-      <button className="add-to-list-button">Add item</button>
-    </form>
+    <div className="form-wrapper">
+      <form onSubmit={handleSubmit}>
+        {/* <label htmlFor="item">Add new item</label> */}
+        <input
+          id="item"
+          type="text"
+          value={item}
+          onChange={(e) => setItem(e.target.value)}
+          placeholder="Add new item..."
+        />
+        <button className="add-to-list-button">Add item</button>
+      </form>
+    </div>
   );
 }
 
