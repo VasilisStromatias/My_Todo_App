@@ -24,13 +24,13 @@ function TodoList({ todos, setTodos }) {
         <h2>Item List</h2>
         <ul className="list">
           {todos.length === 0 && (
-            <div className="empty-list-text">
+            <div className="empty-list-text animate-fade-static">
               <p>There are no items on the list</p>
             </div>
           )}
           {todos.map((todo) => {
             return (
-              <li key={todo.id}>
+              <li key={todo.id} className="animate-fade-b">
                 <input
                   id={todo.id}
                   type="checkbox"
