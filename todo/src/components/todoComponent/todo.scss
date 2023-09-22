@@ -110,6 +110,7 @@
       & label {
         padding-left: 30px;
         position: relative;
+        display: inline-block;
         cursor: pointer;
         &::before {
           content: "";
