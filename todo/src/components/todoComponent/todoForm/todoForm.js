@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 
-function TodoForm() {
-  const [todos, setTodos] = useState([]);
+function TodoForm({ onSubmit }) {
+  const [item, setItem] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    setTodos((currentTodos) => {
-      return [
-        ...currentTodos,
-        {
-          id: crypto.randomUUID(),
-          title: item,
-          completed: false,
-        },
-      ];
-    });
+    if (item === "") return;
+
+    onSubmit(item);
 
     setItem("");
   }
