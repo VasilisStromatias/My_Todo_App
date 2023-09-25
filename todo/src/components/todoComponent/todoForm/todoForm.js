@@ -16,7 +16,6 @@ function TodoForm({ onSubmit }) {
   return (
     <div className="form-wrapper">
       <form onSubmit={handleSubmit}>
-        {/* <label htmlFor="item">Add new item</label> */}
         <input
           id="item"
           type="text"
