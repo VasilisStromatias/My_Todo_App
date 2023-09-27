@@ -196,3 +196,40 @@
     font-size: 20px;
   }
 }
+
+.popup-box {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  position: relative;
+  & .popup-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: 0;
+    background-color: transparent;
+    color: #f2f2f2;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  & .popup-inner {
+    & span {
+      color: #d41c1c;
+      font-size: 20px;
+      text-align: center;
+      display: block;
+    }
+    & h2 {
+      font-size: 42px;
+      color: #f2f2f2;
+      text-align: center;
+    }
+  }
+}
