@@ -313,9 +313,29 @@ tra .item-list-inner .list li:last-child {
   display: block;
 }
 
+.popup-box .popup-inner span::-moz-selection {
+  color: #363636;
+  background-color: #f2f2f2;
+}
+
+.popup-box .popup-inner span::selection {
+  color: #363636;
+  background-color: #f2f2f2;
+}
+
 .popup-box .popup-inner h2 {
   font-size: 42px;
   color: #f2f2f2;
   text-align: center;
+}
+
+.popup-box .popup-inner h2::-moz-selection {
+  color: #363636;
+  background-color: #f2f2f2;
+}
+
+.popup-box .popup-inner h2::selection {
+  color: #363636;
+  background-color: #f2f2f2;
 }
 /*# sourceMappingURL=todo.css.map */
